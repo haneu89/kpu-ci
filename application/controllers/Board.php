@@ -13,4 +13,10 @@ class Board extends CI_Controller {
 	{
 		$this->load->view('board_form');
     }
+    public function write() {
+        $title = $_POST['title'];
+        $content = $_POST['content'];
+        $name = $_POST['name'];
+        echo "$title // $content // $name";
+    }
 }
