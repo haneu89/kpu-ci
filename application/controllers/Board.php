@@ -17,6 +17,8 @@ class Board extends CI_Controller {
         $title = $_POST['title'];
         $content = $_POST['content'];
         $name = $_POST['name'];
-        echo "$title // $content // $name";
+
+        $this->board_model->write($title, $content, $name);
+        echo '저장완료';
     }
 }
